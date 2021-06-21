@@ -1,0 +1,103 @@
+#header {
+    position: sticky;
+    z-index: 1;
+    top: 0;
+    height: 90px;
+    background: #fff;
+
+    .big-container {
+        max-width: 1920px;
+        height: 100%;
+        margin: 0 auto;
+        padding: 0 18px 0 101px;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .logo {
+        flex-grow: 3;
+    }
+
+    .top-bar_nav {
+        ul {
+
+        }
+
+        li {
+            padding: 0 18px;
+
+            &:first-child {
+                padding-left: 0;
+            }
+
+            &:last-child {
+                padding-right: 0;
+            }
+
+            a {
+                font-size: 0.6956521739130435rem;
+                font-weight: 600;
+                text-transform: uppercase;
+                color: #5eb7bb;
+            }
+
+            &:hover {
+                a {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    .top-bar_btn {
+        width: 165px;
+        height: 35px;
+        margin-left: 60px;
+        font-size: 0.6639130434782609rem;
+    }
+
+    @media screen and (max-width: 991.98px) {
+        .top-bar_nav {
+            position: absolute;
+            width: 100vw;
+            margin-left: -20px;
+            background-color: #fff;
+            border-top: 1px solid grey;
+            transform: scaleX(0);
+            transform-origin: 100% 0;
+            transition: .3s ease-in-out;
+
+            &.scale {
+                transform: scaleX(1);
+                transition: .3s ease-in-out;
+            }
+
+            ul {
+                flex-direction: column;
+                align-items: flex-start;
+                width: max-content;
+                margin-left: 20px;
+            }
+
+            li {
+                padding: 10px 0;
+            }
+        }
+
+        .hamburger {
+            display: block;
+        }
+    }
+
+    @media screen and (max-width: 767.98px) {
+        height: 60px;
+
+        .green_btn {
+            width: 120px;
+            height: 30px;
+            margin-left: 0;
+        }
+    }
+}

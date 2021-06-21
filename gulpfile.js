@@ -21,7 +21,7 @@ let path={
         html:[source_folder + '/*.html', '!' + source_folder + '/_*.html'],
         css:source_folder + '/scss/main.scss',
         libs_css: source_folder + '/css/libs/*.css',
-        js:[source_folder + '/js/main.js.js', '!' + source_folder + '/js/_*.js'],
+        js:[source_folder + '/js/main.js', '!' + source_folder + '/js/_*.js'],
         libs_js: source_folder + '/js/libs/*.js',
         img:source_folder + '/img/**/*.{jpg,png,svg,gif,ico,webp}',
         fonts:source_folder + '/fonts/*.ttf',
@@ -29,7 +29,9 @@ let path={
     watch:{
         html:source_folder + '/**/*.html',
         css:source_folder + '/scss/**/*.scss',
+        libs_css:production + '/css/libs/*.css',
         js:source_folder + '/js/**/*.js',
+        libs_js:production + '/js/libs/*.js',
         img:source_folder + '/img/**/*.{jpg,png,svg,gif,ico,webp}',
     },
     clean: './' + production
@@ -133,7 +135,7 @@ function js() {
 }
 
 function jsLibs() {
-    return src(path.src.js)
+    return src(path.src.libs_js)
         .pipe(uglify())
         .pipe(
             rename({
@@ -232,7 +234,9 @@ function cb() { }
 function watchFiles() {
     gulp.watch([path.watch.html], html);
     gulp.watch([path.watch.css], css);
+    gulp.watch([path.watch.libs_css], cssLibs);
     gulp.watch([path.watch.js], js);
+    gulp.watch([path.watch.libs_js], jsLibs);
     gulp.watch([path.watch.img], images);
 }
 

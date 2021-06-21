@@ -21,6 +21,21 @@
   ],
   "dependencies": {
     "jquery": "^3.6.0",
-    "normalize.css": "^8.0.1"
+    "normalize.css": "^8.0.1",
+    "fancybox": "^3.5.7",
+    "lazyload": "^3.2.2"
+  },
+  "overrides": {
+    "fancybox": {
+      "main": [
+        "./dist/jquery.fancybox.css",
+        "./dist/jquery.fancybox.js"
+      ]
+    },
+    "lazyload": {
+      "main": [
+        "./build/lazyload.js"
+      ]
+    }
   }
 }

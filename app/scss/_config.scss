@@ -1,0 +1,105 @@
+html {
+    font-size: 18px;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #374048;
+    background: #fff;
+    overflow-x: hidden;
+}
+
+main {
+    overflow-x: hidden;
+}
+
+ul,
+li {
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'OpenSans', serif;
+}
+
+h1 {
+    font-size: 1.5217391304347827rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+a,
+a:hover,
+a:active,
+a:focus,
+button,
+input,
+button:hover,
+button:active,
+button:focus,
+input:focus,
+input:active {
+    text-decoration: none;
+    outline: none;
+}
+
+.container {
+    position: relative;
+    max-width: 1276px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.upper {
+    text-transform: uppercase;
+}
+
+.flex-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.green_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 600;
+    background-color: #00c660;
+    border: 1px solid transparent;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .3s background-color, .3s color, .3s border-color;
+
+    &:hover {
+        border-color: #00c660;
+        color: #00c660;
+        background-color: transparent;
+    }
+}
